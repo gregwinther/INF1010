@@ -9,9 +9,6 @@ Jeg slet ganske mye med aa faa til en god losning med traadene. Jeg fikk
 alt til aa fungere, men jeg vet ikke om implmenteringen ble helt optimal.
 Til sammenlikning saa var GUI-funksjonaliteten til JavaFX ganske enkel.
 
-Kanter rundt boksene for stoerre brett enn 3*2 ser ikke ut til å fungere.
-Det ser ut til at kolonnekoordinatet ikke naar langt nok.
-
 Jeg tror jeg brukte mellom aatte og ti timer paa obligen.
 
 Jeg har ikke samarbeidet med noe under innleveringen.
