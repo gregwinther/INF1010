@@ -189,7 +189,12 @@ public class GUI extends Application {
 				guiLosning.add(boks, sisteKol, sisteRad,
 					spillet.hentBrett().hentKolonnerBoks(),
 					spillet.hentBrett().hentRaderBoks());
-				
+
+				System.out.println("sisteKol: " + sisteKol);
+				System.out.println("sisteRad: " + sisteRad);
+				System.out.println(spillet.hentBrett().hentKolonnerBoks());
+				System.out.println(spillet.hentBrett().hentKolonnerBoks());
+
 				oppfylt = oppfylt + spillet.hentBrett().hentKolonnerBoks();
 
 				if (nyTeller % spillet.hentBrett().hentKolonnerBoks() == 0) {
