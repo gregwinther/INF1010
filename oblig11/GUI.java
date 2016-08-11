@@ -196,11 +196,10 @@ public class GUI extends Application {
 				System.out.println(spillet.hentBrett().hentKolonnerBoks());
 
 				oppfylt = oppfylt + spillet.hentBrett().hentKolonnerBoks();
+				sisteKol = sisteKol + spillet.hentBrett().hentKolonnerBoks();
 
-				if (nyTeller % spillet.hentBrett().hentKolonnerBoks() == 0) {
-					sisteKol = sisteKol + spillet.hentBrett().hentKolonnerBoks();
-				}
 				nyTeller++;
+
 			}
 		}
 
