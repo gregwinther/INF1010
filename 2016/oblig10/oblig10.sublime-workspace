@@ -1,0 +1,710 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"println"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"rader",
+				"raderBoks"
+			],
+			[
+				"Illeg",
+				"IllegalFormatException"
+			],
+			[
+				"tom",
+				"TOM_RUTE_TEGN"
+			],
+			[
+				"to",
+				"throw"
+			],
+			[
+				"Fi",
+				"FileNotFoundException"
+			],
+			[
+				"linje",
+				"linje"
+			],
+			[
+				"rad",
+				"raderBoks"
+			],
+			[
+				"kolon",
+				"kolonnerBoks"
+			],
+			[
+				"lege",
+				"Legemidler"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"pasient",
+				"pasient"
+			],
+			[
+				"hent",
+				"hentNavn"
+			],
+			[
+				"legemidde",
+				"legemiddelnr"
+			],
+			[
+				"res",
+				"resepter"
+			],
+			[
+				"nu",
+				"nummer"
+			],
+			[
+				"resept",
+				"reseptdata"
+			],
+			[
+				"legemid",
+				"legemidler"
+			],
+			[
+				"L",
+				"Legemiddel"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"Pasi",
+				"Pasient"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"m",
+				"mCl"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"E",
+				"E"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"No",
+				"NoSuchElementException"
+			],
+			[
+				"ne",
+				"neste"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Sudoku.java",
+			"settings":
+			{
+				"buffer_size": 5850,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "https://www.youtube.com/watch?v=A9UmdY0E8hU/**\n* Klasse for en Losning\n*\n* @author Sebastian G. Winther-Larsen\n*\n*/\n\nimport java.util.Arrays;\n\nclass Losning {\n\n	private Rute[][] lostBrett;\n\n	public Losning(Rute[][] brett) {\n\n		int dimensjon = brett.length;\n		Rute[][] losning = new Rute[dimensjon][dimensjon];\n\n		for (int i = 0; i < dimensjon; i++) { // Rad\n			for (int j = 0; j < dimensjon; j++) {\n				Rute rute = brett[i][j];\n				Rute lostRute;\n				if (brett[i][j] instanceof TomRute) {\n					lostRute = new TomRute(rute.hentVerdi(), null);\n				} else {\n					lostRute = new FyltRute(rute.hentVerdi(), null);\n				}\n				losning[i][j] = lostRute;\n			}\n		}\n		this.lostBrett = losning;\n	}\n\n	public void skrivUt() {\n		int dimensjon = lostBrett.length;\n\n		for (int i = 0; i < (dimensjon); i++) {\n			for (int j = 0; j < (dimensjon); j++) {\n				System.out.print(lostBrett[i][j].hentVerdi() + \" \");\n			}\n			System.out.println();\n		}\n		System.out.println();\n\n	}\n}",
+			"file": "Losning.java",
+			"file_size": 910,
+			"file_write_time": 131064158020000000,
+			"settings":
+			{
+				"buffer_size": 953,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "SudokuBeholder.java",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Brett.java",
+			"settings":
+			{
+				"buffer_size": 3728,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Enhet.java",
+			"settings":
+			{
+				"buffer_size": 1029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Rute.java",
+			"settings":
+			{
+				"buffer_size": 2836,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "oblig10.java",
+			"settings":
+			{
+				"buffer_size": 631,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Java/JavaC.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig10"
+	],
+	"file_history":
+	[
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig10/data.txt",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig10/Test.java",
+		"/Users/greg_winther/Documents/UiO/FYS2150/oblig04/bragg.tex",
+		"/Users/greg_winther/Documents/UiO/FYS2130/oblig10/oblig10.tex",
+		"/Users/greg_winther/Documents/Work/HoM/Tarand Marie/tarand1.py",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Sudoku.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Oblig08.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Brett.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Enhet.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Rute.java",
+		"/Users/greg_winther/Documents/UiO/FYS2140/oblig09/oblig09.tex",
+		"/Users/greg_winther/Documents/UiO/FYS2150/LEGO/Python/HelloWorld.py.bak",
+		"/Users/greg_winther/Documents/UiO/FYS2150/LEGO/Python/HelloWorld.py",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/Kolonne.java",
+		"/Users/greg_winther/Documents/UiO/FYS2130/oblig09/oblig09.tex",
+		"/Users/greg_winther/Documents/UiO/FYS2140/midterm.py",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/data.txt",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig08/sudoku.java",
+		"/Users/greg_winther/Documents/UiO/FYS2150/oblig03/gamma.tex",
+		"/Users/greg_winther/Documents/Work/HoM/Helene/helene.tex",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/CrankNicolson.py",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/LegerOgResepter.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/README.txt",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/dataset.txt",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/Resept.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/EnkelReseptListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/SortertEnkelListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/AbstraktSortertEnkelListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/Tabell.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/AbstraktTabell.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/Pasient.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/YngsteForstReseptLise.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/EldsteForstReseptListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/BlaaResept.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/HvitResept.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/PilleC.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig07/Legemiddel.java",
+		"/Users/greg_winther/Desktop/tarand2.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/kvantehomex.tex",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/morse2.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/morse1.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/code/morse1.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/hjemmeeksamen3.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/ForwardEulerHarmonicOscillator.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/CrankNicolsonHarmonicOscillator.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/code/morse2.py",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/code/morse.py",
+		"/Users/greg_winther/Documents/UiO/MAT1120/Oblig_1/Latex/mat1120_1.tex",
+		"/Users/greg_winther/Desktop/tarand.py",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/README.txt",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/Lege.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/SortertEnkelListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/AbstraktSortertEnkelListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/TestTabell.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/Tabell.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/Pasient.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/EnkelReseptListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/EldsteForstReseptListe.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/YngsteForstReseptLise.java",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/Legemiddel.java",
+		"/Users/greg_winther/Documents/UiO/FYS2140/project/kode/morse.py",
+		"/Users/greg_winther/Documents/UiO/FYS2150/2.3/prelab.py",
+		"/Users/greg_winther/Documents/UiO/FYS2130/oblig07/oblig07.tex",
+		"/Users/greg_winther/Documents/UiO/INF1010/oblig06/Lik.java"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"Rute.java",
+			"",
+			"YngsteForstReseptListe",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ArrayList",
+			"Set",
+			"ArrayList",
+			"hentBrett",
+			";}",
+			"relativistiske",
+			"fig:",
+			"\\varvartheta",
+			"theta",
+			"\n ",
+			"2",
+			"antallTall",
+			"a_0",
+			";\n",
+			"print",
+			"IllegalFormatException",
+			"tegn",
+			"!\n",
+			"aktivi",
+			"fig:GM",
+			"gif:GM",
+			"GM",
+			"\\lambda",
+			"forste",
+			"siste",
+			"forste",
+			"hode",
+			"resepter",
+			"sparse",
+			"linalg",
+			"sparse",
+			"figure",
+			"indeks",
+			"hode",
+			"Eldste",
+			"f1",
+			"\"+ ",
+			"this",
+			"lik",
+			"liste"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Set",
+			"ArrayList",
+			"Set",
+			"\\vartheta",
+			"vartheta",
+			"dimensjon",
+			"IndexOutOfBoundsException",
+			"m",
+			"hode",
+			"hale",
+			"hode",
+			"Yngste"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Sudoku.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5850,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3650,
+								3650
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Losning.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "SudokuBeholder.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								633,
+								633
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Brett.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 199.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Enhet.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Rute.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								518
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1293.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "oblig10.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "oblig10.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
