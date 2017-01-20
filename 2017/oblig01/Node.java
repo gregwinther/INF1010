@@ -1,8 +1,8 @@
 
 public class Node {
 
-	int nProcessors;
-	int memory;
+	private int nProcessors;
+	private int memory;
 
 	public Node(int nProcessors, int memory) {
 		this.nProcessors = nProcessors;

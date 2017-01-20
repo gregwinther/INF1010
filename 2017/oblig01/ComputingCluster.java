@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class ComputingCluster {
 
-	int nodesPerRack;
-	ArrayList<Rack> racks;
+	private int nodesPerRack;
+	private ArrayList<Rack> racks;
 
 	public ComputingCluster(int nodesPerRack) {
 		this.nodesPerRack = nodesPerRack;
