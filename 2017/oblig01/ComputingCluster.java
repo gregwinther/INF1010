@@ -16,6 +16,7 @@ public class ComputingCluster {
 	public void insertNode(Node node) {
 
 		int i = 1;
+		boolean wasInserted = false;
 
 		// Iterating over racks
 		for (Rack rack : racks) {
@@ -25,12 +26,18 @@ public class ComputingCluster {
 
 				// Inserting the node if there is space.
 				rack.insertNode(node);
+				wasInserted = true;
+				System.out.println("yo");
 				break;
 			} 
-
 		i++;
 
+		}
 
+		if (!wasInserted) {
+			Rack newRack = new Rack(this.nodesPerRack);
+			racks.add(newRack);
+			newRack.insertNode(node);
 		}
 	}
 
