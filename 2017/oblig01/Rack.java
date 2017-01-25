@@ -6,4 +6,8 @@ public class Rack {
 	public Rack() {
 
 	}
+
+	public insertNode(Node node) {
+		
+	}
 }

@@ -11,6 +11,10 @@ public class ComputingCluster {
 	}
 
 	public void insertNode(Node node) {
-		//racks.add(node);
+		for (Rack rack : racks) {
+			if (!rack.isFull()) {
+				rack.insertNode(node);
+			}
+		}
 	}
 }
