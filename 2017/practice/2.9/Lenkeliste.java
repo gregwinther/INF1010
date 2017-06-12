@@ -1,5 +1,7 @@
-// Klasse for en Node i lenkelisten
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
+// Klasse for en Node i lenkelisten
 class Node<T> {
 
     T innhold;
@@ -9,7 +11,6 @@ class Node<T> {
         lenke = null;
         innhold = null;
     }
-
     Node(T t, Node n) {
         this.innhold = t;
         this.lenke = n;
@@ -35,13 +36,13 @@ class Node<T> {
 
 // Klasse for lenkelisten
 
-class lenkeListe<T> {
+class LenkeListe<T> implements Iterable<T> {
 
     protected Node start;
     protected Node slutt;
     public int storrelse;
     
-    public lenkeListe() {
+    public LenkeListe() {
         start = null;
         slutt = null;
         storrelse = 0;
@@ -128,5 +129,46 @@ class lenkeListe<T> {
         storrelse--;
     }
 
+    public T hentSiste() {
+        Node<T> temp = slutt;
+        return temp.hentInnhold();
+    }
+
+    public T hentFoerste() {
+        Node<T> temp = start;
+        return temp.hentInnhold();
+    }
+
+    // ITERATOR!
+    @Override 
+    public Iterator<T> iterator() {
+        return new Lenkelisteiterator();
+    }
+
+    // Indre klasse
+    private class Lenkelisteiterator implements Iterator<T> {
+        private Node<T> denne;
+
+        Lenkelisteiterator() {
+            System.out.println("Yo!");
+            denne = start;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return denne != null;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+
+            Node<T> temp = denne;
+            denne = denne.hentLenke();
+            return temp.hentInnhold();
+        }
+    }
 
 }
