@@ -150,7 +150,6 @@ class LenkeListe<T> implements Iterable<T> {
         private Node<T> denne;
 
         Lenkelisteiterator() {
-            System.out.println("Yo!");
             denne = start;
         }
 
