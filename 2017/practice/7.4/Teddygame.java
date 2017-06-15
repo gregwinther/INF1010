@@ -1,3 +1,4 @@
+// This algorithm is not working correctly!
 public class Teddygame {
 
     public static void main(String[] args) {
