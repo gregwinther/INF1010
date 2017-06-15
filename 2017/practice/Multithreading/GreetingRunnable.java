@@ -1,7 +1,5 @@
 import java.util.Date;
 
-import jdk.nashorn.internal.ir.CatchNode;
-
 /** 
 A runnable that repeatedly prints a greeting.
 */
